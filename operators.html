@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        // Arithmatic operator +,-,*,**,%,++,--
+
+        var a = 10;
+        var b = 12;
+        var c = a*b;
+        var d = a / b;
+        c++;
+        c--;
+        c++;
+        c++;
+        c++;
+        c--;
+        document.write(c + "<br>");
+        document.write(d + "<br>");
+    </script>
+
+    <script>
+        // Assignment operator = ,+=, -=, *=, %=
+
+        var x = 13;
+        var y = 5;
+        x*=y;
+        document.write(x + "<br>");
+    </script>
+    <script>
+       // Comparsion Operator <, >, <=, >=, ==, !=, ===
+
+       var p = 25;
+       var q = "25";
+       if(p<=q){
+        document.write("its ture");
+       }
+       else{
+        document.write("its false");
+       }
+    </script>
+    <script>
+        // logical operator &&, ||, !
+
+        var day = "Monday";
+        if(day === "Saturday" || day === "Sunday"){
+            document.write("Its Weekend");
+        }
+        else{
+            document.write("Its Weekdays" + "<br>");
+        }
+        
+    </script>
+    <script>
+        var myage = 19;
+        let elegibility = (myage>=18) ? "Eligible for vote" : "Not Eligible for vote";
+        document.write(elegibility);
+    </script>
+  </body>
+</html>

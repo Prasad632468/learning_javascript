@@ -14,34 +14,39 @@
   <body>
     <main>
       <section>
-        <div class="container">
+        <div class="container d-flex justify-content-center align-items-center vh-100
+        " >
           <div class="row">
             <h1>Arithmatic Operation</h1>
             <div class="col-md-6">
-              <form action="" class="border border-primary mt-4">
+              <form action="" class="border border-primary mt-4" name="myform" style="background-color: aliceblue; ">
                 <div class="row px-4">
                   <div class="col-md-12">
                     <label for="">Input First Number</label>
                     <br />
-                    <input id="num1" type="number" />
+                    <input name="n1" type="number" />
                     <br />
-                    <label for="">Input Second Number</label>
+                    <label for="">Input Second Number</label> 
                     <br />
-                    <input id="num2" type="number" />
+                    <input name="n2" type="number" />
                   </div>
                 </div>
                 <div class="row px-4">
                   <div class="col-md-12 mt-4 mb-4">
-                    <button onclick="addNumbers()" type="button" class="btn btn-primary me-3">+</button>
-                    <button onclick="subNumbers()" type="button" class="btn btn-primary me-3">-</button>
-                    <button onclick="mulNumbers()" type="button" class="btn btn-primary me-3">*</button>
-                    <button onclick="divNumbers()" type="button" class="btn btn-primary me-3">/</button>
+                    <button onclick="add()" type="button" class="btn btn-primary me-3">+</button>
+                    <button onclick="sub()" type="button" class="btn btn-primary me-3">-</button>
+                    <button onclick="mul()" type="button" class="btn btn-primary me-3">*</button>
+                    <button onclick="div()" type="button" class="btn btn-primary me-3">/</button>
+                    <button onclick="mod()" type="button" class="btn btn-primary me-3">%</button>
+                    <button type="reset" class="btn btn-outline-primary">Reset</button>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12 px-4 mb-4">
                    
-                    <input type="text" id="result">
+                    <label for="res" >Result</label>
+                    <br>
+                    <input type="text" name="res" class="form-control" disabled>
                   </div>
                 </div>
               </form>
@@ -56,34 +61,46 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        function addNumbers(){
-            let num1 = Number(document.getElementById("num1").value);
-            let num2 = Number(document.getElementById("num2").value);
-            let sum = num1 + num2;
+      var a,b,result;
+      function add(){
+        a=Number(document.myform.n1.value);
+        b=Number(document.myform.n2.value);
+        result=a+b;
 
-            document.getElementById("result").innerHTML = "Result: " + sum;
-        }
-         function subNumbers(){
-            let num1 = Number(document.getElementById("num1").value);
-            let num2 = Number(document.getElementById("num2").value);
-            let sum = num1 - num2;
+        document.myform.res.value=result.toFixed(4);
+      }
 
-            document.getElementById("result").innerHTML = "Result: " + sum;
-        }
-          function mulNumbers(){
-            let num1 = Number(document.getElementById("num1").value);
-            let num2 = Number(document.getElementById("num2").value);
-            let sum = num1 * num2;
+       function sub(){
+        a=Number(document.myform.n1.value);
+        b=Number(document.myform.n2.value);
+        result=a-b;
 
-            document.getElementById("result").innerHTML = "Result: " + sum;
-        }
-          function divNumbers(){
-            let num1 = Number(document.getElementById("num1").value);
-            let num2 = Number(document.getElementById("num2").value);
-            let sum = num1 / num2;
+        document.myform.res.value=result.toFixed(4);
+      }
 
-            document.getElementById("result").innerHTML = "Result: " + sum;
-        }
+        function mul(){
+        a=Number(document.myform.n1.value);
+        b=Number(document.myform.n2.value);
+        result=a*b;
+
+        document.myform.res.value=result.toFixed(4);
+      }
+
+        function div(){
+        a=Number(document.myform.n1.value);
+        b=Number(document.myform.n2.value);
+        result=a/b;
+
+        document.myform.res.value=result.toFixed(4);
+      }
+
+        function mod(){
+        a=Number(document.myform.n1.value);
+        b=Number(document.myform.n2.value);
+        result=a%b;
+
+        document.myform.res.value=result.toFixed(4);
+      }
     </script>
   </body>
 </html>

@@ -82,5 +82,26 @@
                 document.write(arr[i] + "");
             }
         </script>
+        <script>
+            document.write("<h2>Slice example</h2>")
+            var a = ["Mahesh", "Rohit", "Sohan", "Vikas", "Mohan", "vaibhav","Rohan", "Akash"];
+            document.write(a + "<br>");
+
+            // slice (start,end)
+
+            var b= a.slice(0,3);
+            document.write(b + "<br>");
+
+            document.write("<h2>Splice Example</h2>");
+            var a = ["Mahesh", "Rohit", "Sohan", "Vikas", "Mohan", "vaibhav","Rohan", "Akash"];
+
+            // splice(index,how many delete,"new value")
+
+            a.splice(2,0,"Arbaj", "Anand", "Ganesh");
+            document.write(a + "<br>");
+
+            
+        </script>
+
 </body>
 </html>

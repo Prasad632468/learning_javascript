@@ -1,25 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        th {
+            background-color: rgb(255, 122, 122);
+            color: white;
+        }
+
+        td {
+            background-color: rgb(236, 234, 234);
+            color: black;
+        }
+    </style>
+
 </head>
+
 <body>
     <script>
-        var student = [{name : 'prasad', age: 21, address: "Beed"},
-        {name : 'Aditya', age: 21, address: "Pune"},
-        {name : 'Anish', age: 22, address: "Kolhapur"},
-        {name : 'Yogesh', age: 20, address: "Nashik"},
-        {name : 'Rohan', age: 23, address: "Sambhaju Nagar"}, 
+        var student = [{ name: 'prasad', age: 21, address: "Beed" },
+        { name: 'Aditya', age: 21, address: "Pune" },
+        { name: 'Anish', age: 22, address: "Kolhapur" },
+        { name: 'Yogesh', age: 20, address: "Nashik" },
+        { name: 'Rohan', age: 23, address: "Sambhaju Nagar" },
         ];
 
         console.log(student);
-        
-        for(let a=0; a<student.length; a++){
+
+        for (let a = 0; a < student.length; a++) {
             document.write(student[a].name + student[a].age + student[a].address + "<br>");
-            
+
         }
+
+        var employee = [{ name: 'Yogesh', age: 25, address: "Mumbai", phone: 9856741230 },
+        { name: 'Rahul', age: 28, address: "Delhi", phone: 9856741231 },
+        { name: 'Suresh', age: 30, address: "Bangalore", phone: 9856741232 },
+        { name: 'Amit', age: 27, address: "Hyderabad", phone: 9856741233 },
+        { name: 'Vikram', age: 32, address: "Chennai", phone: 9856741234 }];
+
+        
+        document.write("<h2>Employee Details</h2>");
+        document.write("<table>");
+        document.write("<tr>");
+        document.write("<th>Name</th>");
+        document.write("<th>Age</th>");
+        document.write("<th>Address</th>");
+        document.write("<th>Phone</th>");
+        document.write("</tr>");
+
+        for (let i = 0; i < employee.length; i++) {
+            document.write("<tr>");
+            document.write("<td>" + employee[i].name + "</td>");
+            document.write("<td>" + employee[i].age + "</td>");
+            document.write("<td>" + employee[i].address + "</td>");
+            document.write("<td>" + employee[i].phone + "</td>");
+            document.write("</tr>");
+        }
+
     </script>
 </body>
+
 </html>

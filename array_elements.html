@@ -95,11 +95,18 @@
             document.write("<h2>Splice Example</h2>");
             var a = ["Mahesh", "Rohit", "Sohan", "Vikas", "Mohan", "vaibhav","Rohan", "Akash"];
 
+            var a = ["Mahesh", "Rohit", "Sohan", "Vikas", "Mohan", "vaibhav","Rohan"];
+            a.slice(2,4);
+            document.write(a + "<br>");
+
             // splice(index,how many delete,"new value")
 
             a.splice(2,0,"Arbaj", "Anand", "Ganesh");
             document.write(a + "<br>");
 
+            var x = ["Mahesh", "Rohit", "Sohan", "Vikas", "Mohan", "vaibhav","Rohan", "Akash"];
+            x.splice(2,4,"Ramesh", "Somesh");
+            document.write(x + "<br>");
             
         </script>
 
